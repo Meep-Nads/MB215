@@ -16,7 +16,7 @@ while totalsum < 100:
 
 # If the user enters a number, add it to the total sum and increment the count.
     else:
-        totalsum += int(Deposit)
+        totalsum += float(Deposit)
         count += 1
 
 # Once the loop is exited (either the sum reaches/exceeds 100 or the user enters a space), display the total sum and the count of numbers entered.

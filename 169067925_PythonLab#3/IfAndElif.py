@@ -7,8 +7,8 @@
 # Ask the user to input a numeric grade.
 nGrade = float(input("Enter your numeric grade:"))
 
-# Convert the numeric grade into a letter g
-# Ask Clara what she did
+# Convert the numeric grade into a letter grade
+
 if nGrade >= 90:
     lGrade = "A+"
     print(f'Your letter grade is: {lGrade}')

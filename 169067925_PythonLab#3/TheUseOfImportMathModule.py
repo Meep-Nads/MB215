@@ -1,5 +1,5 @@
 # Write a Python program to calculate the volume of a cylinder 
-# The program should perform the following steps:
+
 # import the math module.
 import math
 

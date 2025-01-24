@@ -5,7 +5,7 @@ import turtle
 # Set up your drawing parameters
 ITERATIONS = 5
 NumCircles = 7
-stem = 4
+stem = 2
 # The number of times to repeat the pattern
 ANGLEs = 75
 cAngle = 10
@@ -20,7 +20,7 @@ pattern_turtle = turtle.Turtle()
 pattern_turtle.pencolor('Purple')
 pattern_turtle.pensize(3)
 pattern_turtle.fillcolor('Black')
-pattern_turtle.speed(0)
+pattern_turtle.speed(10)
 
 # Loop to draw the big petal pattern
 for i in range(ITERATIONS):
