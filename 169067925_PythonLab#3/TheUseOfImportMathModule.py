@@ -21,4 +21,4 @@ volume = round((num := pi * (radius ** 2) * height),2)
 
 # output the calculated volume
 # How do I make the 'cm cubed' and make look proper
-print(f"The Volume of the Cylinder is: {volume}cm cubed")
+print(f"The Volume of the Cylinder is: {volume}cm\u00b3")

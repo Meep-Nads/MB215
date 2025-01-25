@@ -8,17 +8,29 @@
 # Python Program for Demonstrating Different Uses of for Loops
 
 # For loop with range to print even numbers from 2 to 20
+strinum = ''
 for num in (range(2,22, + 2)):
-    print(num)
+    strinum += f'{num} '
+print(strinum)
     #print(f'{num:<}',end = ' ')
 # Expected output:
 # Even numbers from 2 to 20: 2 4 6 8 10 12 14 16 18 20
 
 # Nested for loop to create a multiplication table for numbers 1 to 3
 for outer in (1,2,3):
+    header = ''
+    count = 0
     for inner in range(1,11,1):
         muliply = outer * inner
-        print((f'{outer} * {inner} = {muliply}'))
+        strinum = (f'{outer} * {inner} = {muliply}') 
+        
+        # Create a maximum of 7 colums
+        if count == 7:
+            print(header)
+            header = ''
+        count += 1
+        header += f'{strinum:<15}'
+    print(header)
         
 # Expected output:
 # Multiplication table for numbers 1 to 3:

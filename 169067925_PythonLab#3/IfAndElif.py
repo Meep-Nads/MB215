@@ -24,6 +24,7 @@ elif nGrade >= 60 and nGrade <= 69:
 elif nGrade >= 50 and nGrade <= 59:
     lGrade = "D"
     print(f'Your letter grade is: {lGrade}')
-elif nGrade <= 50:
+else:
+    #nGrade <= 50:
     lGrade = "F"
     print(f'Your letter grade is: {lGrade}')

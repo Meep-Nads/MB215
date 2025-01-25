@@ -11,7 +11,6 @@ dead = False
 
 # Logical AND
 print(alive and dead)
-# a = 42 and b = 0 
 
 # Logical OR
 print(alive or dead)
@@ -20,9 +19,9 @@ print(alive or dead)
 print(not(alive))
 
 # Step 3: Use a Boolean variable in conditional statement
-result = 'Yay your alive' if alive < dead else 'Oh no your dead'
+result = "Yay you're alive" if alive else "Oh no you're dead"
 print(result)
 
 # Conditional statement with logical operation
-result = 'Yay your not dead' if not(dead) else 'Whoop Whoop'
+result = "Yay you're not dead" if not(dead) else "Whoop Whoop"
 print(result)
