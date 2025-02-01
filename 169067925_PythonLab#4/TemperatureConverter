@@ -1,5 +1,6 @@
 import random
 
+# Activity 2: Temperature Converter
 def convert_temperature(temp, unit):
     
     #Convert Fahrenheit to Celsius if unit is f
@@ -21,4 +22,4 @@ temp = int(input("Enter temperature: "))
 unit = input("Enter unit 'F' for Farhrenheit and 'C' for Celsius: ")
 
 #Print What is being converting and Conversion result
-print(f"A temperature of {temp}'{unit} is {convert_temperature(temp, unit)}")
+#print(f"A temperature of {temp}'{unit} is {convert_temperature(temp, unit)}")

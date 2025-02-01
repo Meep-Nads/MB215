@@ -24,6 +24,6 @@ num_dice = int(input('How many dice would you like to roll: '))
 num_sides = int(input('Enter amount of dice sides: '))
 
 #print sum of all dice rolled 
-print(f'Rolling {num_dice} D{num_sides} ... Result is {roll_dice(num_dice, num_sides)}')
+#print(f'Rolling {num_dice} D{num_sides} ... Result is {roll_dice(num_dice, num_sides)}')
 
  
