@@ -14,4 +14,4 @@ min_val = int(input("Enter Minimum Value: "))
 max_val = int(input("Enter Maximum Value: "))
 
 #print the random number generated
-#print(f'Your random value is: {generate_random_number(max_val,max_val)}')
+print(f'Your random value is: {generate_random_number(max_val,max_val)}')

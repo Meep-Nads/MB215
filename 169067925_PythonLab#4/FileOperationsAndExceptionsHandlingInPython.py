@@ -46,6 +46,6 @@ if __name__ == "write":
       #write missing code here.
 
 # Trying to read from a non-existent file to demonstrate exception handling
-    #non_existent_content = read_from_file('non_existent_file.txt')
-    #if non_existent_content is None:
-        #print("Could not read the non-existent file.")
+    non_existent_content = read_from_file('non_existent_file.txt')
+    if non_existent_content is None:
+        print("Could not read the non-existent file.")

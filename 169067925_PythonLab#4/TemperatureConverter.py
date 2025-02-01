@@ -22,4 +22,4 @@ temp = int(input("Enter temperature: "))
 unit = input("Enter unit 'F' for Farhrenheit and 'C' for Celsius: ")
 
 #Print What is being converting and Conversion result
-#print(f"A temperature of {temp}'{unit} is {convert_temperature(temp, unit)}")
+print(f"A temperature of {temp}'{unit} is {convert_temperature(temp, unit)}")

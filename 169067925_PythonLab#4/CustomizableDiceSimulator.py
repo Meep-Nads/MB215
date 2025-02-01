@@ -10,8 +10,6 @@ def roll_dice(num_dice, num_sides):
 
         #determining dice roll based on num of sides inputed
         a = random.randint(1, num_sides)
-
-        ###print(f'roll is: {a}')### (please ignore for debuging)
         
         #add dice roll to total 
         total += a
@@ -24,6 +22,6 @@ num_dice = int(input('How many dice would you like to roll: '))
 num_sides = int(input('Enter amount of dice sides: '))
 
 #print sum of all dice rolled 
-#print(f'Rolling {num_dice} D{num_sides} ... Result is {roll_dice(num_dice, num_sides)}')
+print(f'Rolling {num_dice} D{num_sides} ... Result is {roll_dice(num_dice, num_sides)}')
 
  
