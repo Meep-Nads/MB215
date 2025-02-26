@@ -20,3 +20,16 @@ else:
 
 #Advanced: Create a program that asks the user for their age and then prints out if they are a child, teenager, adult, 
 #or senior based on their input.
+
+age = int(input('Enter your age: '))
+
+if age in range(0,13):
+   print('You are a Child')
+elif age in range(13,18):
+   print('You are a Teenager')
+elif age in range(18,65):
+   print('You are an Adult')
+elif age >= 65:
+   print('You are a Senior')
+else:
+   print('Error.3')
