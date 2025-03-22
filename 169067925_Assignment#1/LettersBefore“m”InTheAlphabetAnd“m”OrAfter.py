@@ -4,14 +4,29 @@
 #Task Description:
 #1.	Function count_before_m:
 #o	This function will take a single string argument.
+def count_before_m(string):
+    count = 0
+    for char in string:
+        if char.lower() < 'm':
+            count += 1
 #o	It will return the count of all letters within the string that come before 'm' in the alphabet.
 #2.	Function count_m_and_after:
+    #o    This function will also take a single string argument.
+def count_m_and_after(string):
+    count = 0
+    for char in string:
+        if char.lower() >= 'm':
+            count += 1
 #o	This function will also take a single string argument.
 #o	It will return the count of all letters within the string that are 'm' or come after 'm' in the alphabet.
 #3.	User Input:
 #o	Prompt the user to enter a string.
+string = input('Enter a string: ')
 #o	Ensure that the string is evaluated case-insensitively, meaning 'M' and 'm' are treated equally.
+string = string.lower()
 #4.	Output Display:
+print (f"Number of letters before 'm' in the alphabet: {string}")
+print (f"Number of letters 'm' or after in the alphabet: {string}")
 #o	Using the input string, call both functions and display the results.
 #o	Show the user the count of letters before 'm' and the count of letters 'm' and after.
 #Sample output:
