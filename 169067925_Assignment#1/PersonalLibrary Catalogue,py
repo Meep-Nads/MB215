@@ -1,0 +1,105 @@
+import os
+
+FILENAME = "library_catalogue.txt"
+
+def check_or_create_file():
+    if not os.path.exists(FILENAME):
+        with open(FILENAME, 'w') as file:
+            pass  # Create an empty file
+        print(f"File '{FILENAME}' not found. A new file has been created.")
+
+def add_book():
+    title = input("\nEnter the book title: ")
+    author = input("Enter the author's name: ")
+    year = input("Enter the year of publication: ")
+    try:
+        with open(FILENAME, 'a') as file:
+            file.write(f"{title}|{author}|{year}\n")
+        print("Book added successfully!")
+    except Exception as e:
+        print(f"An error occurred while adding the book: {e}")
+
+def list_books():
+    print("\nLibrary Catalogue:")
+    try:
+        with open(FILENAME, 'r') as file:
+            lines = file.readlines()
+            if not lines:
+                print("The catalogue is empty.")
+            else:
+                for idx, line in enumerate(lines, start=1):
+                    title, author, year = line.strip().split('|')
+                    print(f"{idx}. {title} by {author}, Published in {year}")
+    except Exception as e:
+        print(f"An error occurred while listing books: {e}")
+
+def search_book():
+    keyword = input("\nEnter the title or author's name to search: ").lower()
+    found = False
+    try:
+        with open(FILENAME, 'r') as file:
+            lines = file.readlines()
+            for line in lines:
+                title, author, year = line.strip().split('|')
+                if keyword in title.lower() or keyword in author.lower():
+                    print(f"Found: {title} by {author}, Published in {year}")
+                    found = True
+        if not found:
+            print("No matching book found in the catalogue.")
+    except Exception as e:
+        print(f"An error occurred while searching for the book: {e}")
+
+def remove_book():
+    title_to_remove = input("\nEnter the title of the book to remove: ").lower()
+    try:
+        with open(FILENAME, 'r') as file:
+            lines = file.readlines()
+        
+        new_lines = []
+        removed = False
+        for line in lines:
+            title, author, year = line.strip().split('|')
+            if title.lower() != title_to_remove:
+                new_lines.append(line)
+            else:
+                removed = True
+
+        if removed:
+            with open(FILENAME, 'w') as file:
+                file.writelines(new_lines)
+            print("Book removed successfully.")
+        else:
+            print("Book not found in the catalogue.")
+    except Exception as e:
+        print(f"An error occurred while removing the book: {e}")
+
+def main():
+    print("Welcome to your Personal Library Catalogue!")
+    check_or_create_file()
+
+    while True:
+        print("\nPlease choose an option:")
+        print("1 - Add a New Book")
+        print("2 - List All Books")
+        print("3 - Search for a Book")
+        print("4 - Remove a Book")
+        print("0 - Exit")
+
+        choice = input("\nEnter your choice: ")
+
+        if choice == "1":
+            add_book()
+        elif choice == "2":
+            list_books()
+        elif choice == "3":
+            search_book()
+        elif choice == "4":
+            remove_book()
+        elif choice == "0":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":
+    main()

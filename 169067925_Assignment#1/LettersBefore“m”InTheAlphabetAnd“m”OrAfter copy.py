@@ -39,3 +39,30 @@ def main():
 
 #Number of letters before 'm' in the alphabet: 24
 #Number of letters 'm' or after in the alphabet: 2
+
+
+def count_before_m(s):
+    count = 0
+    for char in s.lower():
+        if char.isalpha() and char < 'm':
+            count += 1
+    return count
+
+def count_m_and_after(s):
+    count = 0
+    for char in s.lower():
+        if char.isalpha() and char >= 'm':
+            count += 1
+    return count
+
+def main():
+    user_input = input("Please enter a string: ")
+
+    before_m_count = count_before_m(user_input)
+    m_and_after_count = count_m_and_after(user_input)
+
+    print(f"\nNumber of letters before 'm' in the alphabet: {before_m_count}")
+    print(f"Number of letters 'm' or after in the alphabet: {m_and_after_count}")
+
+if __name__ == "__main__":
+    main()
