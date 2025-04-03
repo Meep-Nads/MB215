@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="time"></div>
+    <div id="chatBox"></div>
+    <input type="text" id="message" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="clearChat()">Clear Chat</button>
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('message').value;
+            fetch(`/chat/?message=${message}`)
+                .then(response => response.json())
+                .then(data => {
+                    const chatBox = document.getElementById('chatBox');
+                    chatBox.innerHTML += `<p>You: ${message}</p>`;
+                    chatBox.innerHTML += `<p>Bot: ${data.response}</p>`;
+                    document.getElementById('message').value = '';
+                });
+        }
+        function clearChat() {
+            document.getElementById('chatBox').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        document.getElementById('time').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
