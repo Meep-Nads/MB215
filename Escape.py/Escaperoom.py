@@ -55,18 +55,18 @@ elif adminsyst == 'Building Access Control System' and department == 'Campus Fac
                         print('5 - Research Academic Centre West')
                         print('6 - Research Academic Centre East')
                         file = input('Select Building: ')
-                        if file == 1:
-                            print('1')
-                        elif file == 2:
-                            print('2')
-                        elif file == 3:
-                            print('3')
-                        elif file == 4:
-                            print('4')
-                        elif file == 5:
-                            print('5')
-                        elif file == 6:
-                            print('6')
+                        if file == '1':
+                            print('1 - 0 - 4 - 7')
+                        elif file == '2':
+                            print('2 - 3 - 5 - 8')
+                        elif file == '3':
+                            print('3 - 5 - 6 - 8')
+                        elif file == '4':
+                            print('4 - 0 - 6 - 8')
+                        elif file == '5':
+                            print('5 - 5 - 3 - 4')
+                        elif file == '6':
+                            print('6 - 7 - 9 - 1')
                         else:
                             print('Unable to find file')
                     else: 
